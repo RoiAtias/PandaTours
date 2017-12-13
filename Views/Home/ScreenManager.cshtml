@@ -1,0 +1,86 @@
+﻿@model IEnumerable<PandaTours.Models.LoginViewModel>
+
+@{
+    ViewBag.Title = "ScreenManager";
+}
+
+<br /><br />
+<br /><br />
+<br /><br />
+<br />
+<div class="container body-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h5 class="text-muted4">Manager Panel</h5>
+            </div>
+        </div>
+        <hr />
+        <br />
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-4 portfolio-item">
+                <a href="@Url.Action("Index", "VacationPackage")">
+                    <img class="img-responsive" src="@Url.Content("~/img/imgManger/vacation.jpg")" alt="">
+                </a>
+
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <a href="@Url.Action("Index", "Supplier")">
+                    <img class="img-responsive" src="@Url.Content("~/img/imgManger/Supplier.jpg")" alt="">
+                </a>
+
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <a href="@Url.Action("Weather", "Home")">
+                    <img class="img-responsive" src="@Url.Content("~/img/imgManger/weather.jpg")" alt="">
+                </a>
+            </div>
+        </div>
+
+
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-4 portfolio-item">
+                <a href="@Url.Action("Index", "Customer")">
+                    <img class="img-responsive" src="@Url.Content("~/img/imgManger/Customer.jpg")" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <a href="@Url.Action("Index", "Order")">
+                    <img class="img-responsive" src="@Url.Content("~/img/imgManger/order.jpg")" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <a href="@Url.Action("ManageLocation", "Location")">
+                    <img class="img-responsive" src="@Url.Content("~/img/imgManger/location.jpg")" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 portfolio-item">
+                <a href="@Url.Action("Index", "Order")">
+                    <img class="img-responsive" src="@Url.Content("~/img/imgManger/search.jpg")" alt="">
+                </a>
+
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <a href="@Url.Action("statistics", "Order")">
+                    <img class="img-responsive" src="@Url.Content("~/img/imgManger/stat.jpg")" alt="">
+                </a>
+
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <a href="@Url.Action("FaceBookManager", "Home")">
+                    <img class="img-responsive" src="@Url.Content("~/img/imgManger/facebook.jpg")" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div>
+        </div>
+    </div>
+    <hr />
+
+</div>

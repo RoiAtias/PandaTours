@@ -1,0 +1,64 @@
+﻿@model PandaTours.Models.Location
+
+@{
+    ViewBag.Title = "Details";
+}
+<br /><br />
+<br /><br />
+<br /><br />
+<div class="container body-content">
+    <h2 class="text-muted">Location Details</h2>
+    <div class="text-right">
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+    <div class="text-left">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.LocationId })
+    </div>
+    <hr />
+    <br />
+    <div class="text-left">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Latitude)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Latitude)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Longitude)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Longitude)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ZIndex)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ZIndex)
+            </dd>
+
+        </dl>
+    </div>
+    </div>
+

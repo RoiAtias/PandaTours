@@ -1,0 +1,140 @@
+﻿@model PagedList.IPagedList<PandaTours.Models.VacationPackage>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="container body-content">
+    <script>
+        $(document).ready(function () {
+            $("#flip").click(function () {
+                $("#panel").slideToggle("slow");
+            });
+        });
+
+    </script>
+    <br /><br />
+    <br /><br />
+    <br /><br />
+    <h2 class="text-muted">Panda-Tours Packages</h2>
+    <div class="text-right">
+        @if (User.Identity.Name == System.Configuration.ConfigurationManager.AppSettings["adminUserName"])
+        {
+            <p>
+                @Html.ActionLink("Create New", "Create")
+            </p>
+
+        }
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            @using (Html.BeginForm("Index", "VacationPackage", FormMethod.Get))
+            {
+                <p>
+                    <h2 class="text-muted3">Find Package by Destination or by Hotel:</h2> @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+                    <input type="submit" value="Search" class="btn btn-primary" />
+                </p>
+            }
+            @if (User.Identity.Name == System.Configuration.ConfigurationManager.AppSettings["adminUserName"])
+            {
+                <div id="flip">Advance Searching</div>
+                <div id="panel">
+                    @using (Html.BeginForm("Search", "VacationPackage", FormMethod.Get))
+                    {
+                        <p>
+                            <h2 class="text-muted3">Find Package by Destination, Hotel and number of Night :</h2>
+                            Destination:@Html.TextBox("Destination", ViewBag.CurrentFilter as string)
+                            Hotel:@Html.TextBox("Hotel", ViewBag.CurrentFilter as string)
+                            Night number: @Html.TextBox("NightNum", ViewBag.CurrentFilter as string)
+                            <input type="submit" value="Filter" class="btn btn-primary" />
+                        </p>
+                    }
+
+                </div>
+            }
+        </div>
+    </div>
+
+
+
+    <br />
+    <table class="table table-bordered">
+        <tr>
+            <th>
+                SupplierName
+            </th>
+            <th>
+                Destination
+            </th>
+            <th>
+                Hotel
+            </th>
+            <th>
+                DepartDate
+            </th>
+            <th>
+                ReturnDate
+            </th>
+            <th>
+                NightNum
+            </th>
+            <th>
+                SinglePay
+            </th>
+            <th>
+                Image
+            </th>
+            @if (User.Identity.Name == System.Configuration.ConfigurationManager.AppSettings["adminUserName"])
+            {
+                <th></th>
+            }
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.supplier.SupplierName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Destination)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Hotel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DepartDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReturnDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NightNum)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SinglePay)
+                </td>
+                <td>
+                    <img src=\img\@Html.DisplayFor(modelItem=>item.Image) width="100"
+                </td>
+                @if (User.Identity.Name == System.Configuration.ConfigurationManager.AppSettings["adminUserName"])
+                {
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.VacationPackageID })   |
+                        @Html.ActionLink("Details", "Details", new { id = item.VacationPackageID })  |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.VacationPackageID })
+                    </td>
+                }
+            </tr>
+        }
+    </table>
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+        </div>
+    </div>
+    </div>

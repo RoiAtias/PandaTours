@@ -1,0 +1,110 @@
+﻿@model PandaTours.Models.VacationPackage
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="container body-content">
+    @using (Html.BeginForm("Create", "VacationPackage", null, FormMethod.Post, new { enctype = "multipart/from-data" }))
+    {
+        @Html.AntiForgeryToken()
+        <br /><br />
+        <br /><br />
+        <br /><br />
+
+        <h2 class="text-muted">Package Details</h2>
+        <div class="text-right">
+            <div>
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        </div>
+        <hr />
+        <div class="form-horizontal">
+            @Html.ValidationSummary(true)
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.VacationPackageID, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.VacationPackageID)
+                    @Html.ValidationMessageFor(model => model.VacationPackageID)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.SupplierID, "SupplierID", new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("SupplierID", String.Empty)
+                    @Html.ValidationMessageFor(model => model.SupplierID)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Destination, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Destination)
+                    @Html.ValidationMessageFor(model => model.Destination)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Hotel, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Hotel)
+                    @Html.ValidationMessageFor(model => model.Hotel)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.DepartDate, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.DepartDate)
+                    @Html.ValidationMessageFor(model => model.DepartDate)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ReturnDate, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ReturnDate)
+                    @Html.ValidationMessageFor(model => model.ReturnDate)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.NightNum, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.NightNum)
+                    @Html.ValidationMessageFor(model => model.NightNum)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.SinglePay, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.SinglePay)
+                    @Html.ValidationMessageFor(model => model.SinglePay)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Image, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <input id="Image" title="Upload a product image" type="file" name="file" />
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    }
+
+
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+</div>

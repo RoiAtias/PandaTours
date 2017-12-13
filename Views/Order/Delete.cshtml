@@ -1,0 +1,83 @@
+﻿@model PandaTours.Models.Order
+
+@{
+    ViewBag.Title = "Delete";
+}
+<br /><br />
+<br /><br />
+<br /><br />
+<div class="container body-content">
+    <h2 class="text-muted">Delete Order</h2>
+    <div class="text-right">
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+    <hr />
+    <br />
+    <div class="text-left">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Customer.PassportNum)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Customer.PassportNum)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.VacationPackage.Destination)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.VacationPackage.Destination)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PassengersNum)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PassengersNum)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Total)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Total)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.OrderDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.OrderDate)
+            </dd>
+
+        </dl>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <h2 class="text-muted3">Are you sure you want to delete this?</h2>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-primary" /> |
+
+            </div>
+        }
+    </div>
+    </div>
+

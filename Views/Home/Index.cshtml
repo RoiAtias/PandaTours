@@ -1,0 +1,678 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lobster">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Sigmar One">
+
+<!-- Intro -->
+<header class="intro">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h1 id="welcomeLogo">Welcome to</h1>
+                    <h2 id="mainLogo">Panda-Tours</h2>
+                    <p></p>
+                    <!-- btn btn-circle page-scrol-->
+                    <a href="#ThingsToDo" class="btn btn-circle page-scroll">
+                        <i class="fa fa-angle-double-down animated"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+<br />
+<br />
+<br />
+<!--THE BEST TRAVEL DESTINATIONS button-return statistic ouery -->
+<div class="col-lg-12 text-center">
+    @Html.ActionLink(" THE BEST TRAVEL DESTINATIONS ", "Contact", "Home", new { @class = "btn btn-info" })
+</div>
+<br />
+
+<!-- Things To Do screen -->
+<section id="ThingsToDo" class="content-section text-center">
+    <section id="portfolio">
+        <div class="White-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2>Things To Do</h2>
+                        <hr class="star-primary">
+                    </div>
+                </div>
+                <!--Destinations -->
+                <div class="row">
+                    <div class="col-md-4 portfolio-item">
+                        <a href="#Amsterdam">
+                            <img class="img-responsive" src="~/img/imgDest/amsterdam.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-4 portfolio-item">
+                        <a href="#Barcelona">
+                            <img class="img-responsive" src="~/img/imgDest/barcelona.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-4 portfolio-item">
+                        <a href="#Bijing">
+                            <img class="img-responsive" src="~/img/imgDest/beijing.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 portfolio-item">
+                        <a href="#Berlin">
+                            <img class="img-responsive" src="~/img/imgDest/berlin.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-4 portfolio-item">
+                        <a href="#Dublin">
+                            <img class="img-responsive" src="~/img/imgDest/dublin.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-4 portfolio-item">
+                        <a href="#London">
+                            <img class="img-responsive" src="~/img/imgDest/london.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 portfolio-item">
+                        <a href="#NewYork">
+                            <img class="img-responsive" src="~/img/imgDest/newyork.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-4 portfolio-item">
+                        <a href="#Paris">
+                            <img class="img-responsive" src="~/img/imgDest/paris.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-4 portfolio-item">
+                        <a href="#Rome">
+                            <img class="img-responsive" src="~/img/imgDest/rome.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- Berlin -->
+<section id="Berlin" class="content-section text-center">
+    <header class="berlin-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="tagline">Berlin</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Berlin Attractions-->
+    <div class="container">
+        <hr class="featurette-divider">
+        <div class="featurette" id="about">
+            <img class="featurette-image img-circle img-responsive pull-right" src="~/img/imgAt/barlin1.png">
+            <h2 class="featurette-heading">
+                Berlin Cathedral
+                <span class="text-muted">Berlin Cathedral</span>
+            </h2>
+            <p class="lead">
+                The Berliner Dom (Berlin Cathedral) was built between 1894 and 1905 on an island in the river Spree now known as Museum Island.
+                The church, the largest in the city, was heavily damaged during the war and only reopened in 1993.
+            </p>
+        </div>
+        <hr class="featurette-divider">
+        <div class="featurette" id="services">
+            <img class="featurette-image img-circle img-responsive pull-left" src="~/img/imgAt/barlin2.png">
+            <h2 class="featurette-heading">
+                Fernsehturm
+                <span class="text-muted">Fernsehturm</span>
+            </h2>
+            <p class="lead">
+                The Berliner Fernsehturm is a television tower which rises to a height of more than 360 meters from its futuristic looking base at the
+                southwest side of Alexanderplatz. The tower is the tallest structure in Berlin and can be seen from almost anywhere in the city.
+            </p>
+        </div>
+        <hr class="featurette-divider">
+        <div class="featurette" id="contact">
+            <img class="featurette-image img-circle img-responsive pull-right" src="~/img/imgAt/berlin3.jpg">
+            <h2 class="featurette-heading">
+                Brandenburg Gate
+                <span class="text-muted">Brandenburg Gate</span>
+            </h2>
+            <p class="lead">
+                he Brandenburg Gate, a monumental gate built in the eighteenth century as a symbol of peace, is Berlin's most famous landmark.
+                During the Cold War, when the gate was located right near the border between East and West Berlin, it became a symbol of a divided city.
+            </p>
+        </div>
+        <hr class="featurette-divider">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-36">
+                <!-- Video berlin -->
+                <h2>Berlin Vacation Travel Guide</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/hVfBQNENS9s" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Rome -->
+<section id="Rome" class="content-section text-center">
+    <header class="rome-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="tagline">Rome</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <hr class="featurette-divider">
+        <!-- Rome Attractions-->
+        <div class="featurette" id="about">
+            <img class="featurette-image img-circle img-responsive pull-right" src="~/img/imgAt/Rome1.jpg">
+            <h2 class="featurette-heading">
+                Colosseum
+                <span class="text-muted">Colosseum</span>
+            </h2>
+            <p class="lead">
+                The Colosseum is probably the most impressive building of the Roman Empire. Originally known as the Flavian Amphitheater,
+                it was the largest building of the era.
+            </p>
+        </div>
+
+        <hr class="featurette-divider">
+        <div class="featurette" id="services">
+            <img class="featurette-image img-circle img-responsive pull-left" src="~/img/imgAt/Rome2.jpg">
+            <h2 class="featurette-heading">
+                Trevi Fountain
+                <span class="text-muted">Trevi Fountain</span>
+            </h2>
+            <p class="lead">
+                The Fontana di Trevi just may be the world's most famous wishing well—certainly one of the most lucrative,
+                what with every tourist tossing "three coins in a fountain"
+                The famous Trevi Fountain is a huge baroque confection of thrashing mer-horses, splashing water, and striding Tritons presided over by a muscular Neptune.
+            </p>
+        </div>
+        <hr class="featurette-divider">
+        <div class="featurette" id="contact">
+            <img class="featurette-image img-circle img-responsive pull-right" src="~/img/imgAt/Rome3.jpg">
+            <h2 class="featurette-heading">
+                Foro romano
+                <br />
+                <span class="text-muted">Foro romano</span>
+            </h2>
+            <p class="lead">The Forum Romanum was the center of life in Imperial Rome, evidenced by the many remains of triumphal arches, temples and basilicas.</p>
+        </div>
+        <hr class="featurette-divider">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-36">
+                <!-- Video Rome -->
+                <h2>Rome-Travel Guide</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/DEJx0CYrDHk?list=PLdgCSoJzrmKFXYP_UyJb3b5hFS_703eT8" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Paris -->
+<section id="Paris" class="content-section text-center">
+    <header class="paris-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="tagline">Paris</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <hr class="featurette-divider">
+        <!-- Paris Attractions-->
+        <div class="featurette" id="about">
+            <img class="featurette-image img-circle img-responsive pull-right" src="~/img/imgAt/Paris1.jpg">
+            <h2 class="featurette-heading">
+                Eiffel Tower
+                <br />
+                <span class="text-muted">Eiffel Tower</span>
+            </h2>
+            <p class="lead">
+                Once the tallest structure in the world, the Eiffel Tower is probably Europe's best known landmark and Paris's most famous symbol.
+                You couldn't possibly visit Paris without seeing the Eiffel Tower. Even if you do not want to visit this world famous structure,
+                you will see its top from all over Paris. The tower rises 300 meters tall (984 ft); when it was completed at the end of the nineteenth century
+                it was twice as high as the Washington Monument, at the time the tallest structure in the world.
+            </p>
+        </div>
+        <hr class="featurette-divider">
+        <div class="featurette" id="services">
+            <img class="featurette-image img-circle img-responsive pull-left" src="~/img/imgAt/Paris2.jpg">
+            <h2 class="featurette-heading">
+                Louvre Museums
+                <span class="text-muted"> Louvre Museums</span>
+            </h2>
+            <p class="lead">
+                The Louvre, originally a royal palace but now the world's most famous museum, is a must-visit for anyone with a
+                slight interest in art. Some of the museum's most celebrated works of art include the Mona Lisa and the Venus of Milo.
+            </p>
+        </div>
+        <hr class="featurette-divider">
+        <div class="featurette" id="contact">
+            <img class="featurette-image img-circle img-responsive pull-right" src="~/img/imgAt/Paris3.jpg">
+            <h2 class="featurette-heading">
+                Disneyland Paris
+                <span class="text-muted">Disneyland Paris</span>
+            </h2>
+            <p class="lead">
+                A city break to Disneyland Paris offers something for all the family. Explore five incredible lands and experience your favourite Disney stories coming to life before your eyes.
+                Famous for rides that delight all ages, Disneyland Paris includes the famous Space Mountain: Mission 2, Indiana Jones and the Temple of Peril, and Pirates of the Caribbean. Kids will love Peter Pan’s Flight and for the brave, there’s Phantom Manor and The Twilight Zone Tower of Terror.
+                It isn’t a city break to Disneyland Paris without meeting the stars. Guests off all ages can meet with Disney characters all over the park. Stop for a hug or an autograph
+                and make sure you snap a picture to mark your unforgettable encounter.Make sure the whole family experience Disney Village, with live shows including Buffalo Bill’s Wild
+                West Show with Mickey and Friends.
+            </p>
+        </div>
+        <hr class="featurette-divider">
+        <!-- Video Paris -->
+        <h2>Paris-Travel Guide</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/AQ6GmpMu5L8" frameborder="0"></iframe>
+    </div>
+</section>
+
+<!-- Dublin  -->
+<section id="Dublin" class="content-section text-center">
+    <header class="dublin-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="tagline">Dublin</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <hr class="featurette-divider">
+        <!-- Dublin Attractions  -->
+        <div class="featurette" id="about">
+            <img class="featurette-image img-circle img-responsive pull-right" src="~/img/imgAt/Dublin1.jpg">
+            <h2 class="featurette-heading">
+                Guinness Storehouse
+                <span class="text-muted">Guinness Storehouse</span>
+            </h2>
+            <p class="lead">
+                Located in the heart of the St James’s Gate Brewery, which has been home to the black stuff since 1759, this massive seven-storey building,
+                a former Guinness® fermentation plant, has been remodelled into the shape of a giant pint of Guinness®. A visit will teach you everything you ever
+                wanted to know about this world famous beer. The highlight for many visitors is the Gravity Bar® where they receive a complimentary pint of Guinness® and a
+                chance to relax and enjoy the breathtaking 360-degree views across Dublin City.
+            </p>
+        </div>
+        <hr class="featurette-divider">
+        <div class="featurette" id="services">
+            <img class="featurette-image img-circle img-responsive pull-left" src="~/img/imgAt/Dublin2.jpg">
+            <h2 class="featurette-heading">
+                Farmleigh House
+                <span class="text-muted">Farmleigh House</span>
+            </h2>
+            <p class="lead">
+                Built in the late eighteenth century, Farmleigh was purchased by Edward Cecil Guinness, a great-grandson of Arthur Guinness, in 1873.
+                The house contains many beautiful features including the Main House area (a fine example of Georgian-Victorian architecture), the Sunken Garden, the Walled Garden,
+                the famous Clock Tower and the Lake and The Benjamin Iveagh Library. The library holds some of the finest examples of Irish bookbinding from the eighteenth, nineteenth
+                and twentieth centuries. The collection was donated to Marsh’s Library by the Guinness family.
+            </p>
+        </div>
+        <hr class="featurette-divider">
+        <div class="featurette" id="contact">
+            <img class="featurette-image img-circle img-responsive pull-right" src="~/img/imgAt/Dublin3.jpg">
+            <h2 class="featurette-heading">
+                st. patrick's cathedral <br />
+                <span class="text-muted">st. patrick's cathedral</span>
+            </h2>
+            <p class="lead">
+                Built between 1220 and 1260, the Cathedral is one of the few buildings left from the medieval city of Dublin.
+                Today, St Patrick's is the National Cathedral for the Church of Ireland and still the largest cathedral in Ireland. Visitors can learn about the building’s fascinating
+                history, including its most famous Dean (head) Jonathan Swift, who is one of around 700 burials on site.
+            </p>
+        </div>
+        <hr class="featurette-divider">
+        <!-- Video Dublin -->
+        <h2>Dublin-Travel Guide</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/GTeyx1A-Gdg" frameborder="0"></iframe>
+    </div>
+</section>
+
+<!-- Barcelona  -->
+<section id="Barcelona" class="content-section text-center">
+    <header class="Barc-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="tagline">Barcelona</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <hr class="featurette-divider">
+        <!-- Barcelona Attractions  -->
+        <div class="featurette" id="about">
+            <img class="featurette-image img-circle img-responsive pull-right" src="~/img/imgAt/Barclona1.jpg">
+            <h2 class="featurette-heading">
+                Sagrada Família
+                <span class="text-muted">Sagrada Família</span>
+            </h2>
+            <p class="lead">
+                The Sagrada Família, Antoni Gaudí's unfinished masterpiece, is one of Barcelona's most popular tourist attractions.
+                Construction on this church will continue for at least another decade, but it has already become Barcelona's most important landmark.
+            </p>
+        </div>
+
+        <hr class="featurette-divider">
+        <div class="featurette" id="services">
+            <img class="featurette-image img-circle img-responsive pull-left" src="~/img/imgAt/Barclona2.jpg">
+            <h2 class="featurette-heading">
+                Parc Güell<br />
+                <span class="text-muted">Parc Güell</span>
+            </h2>
+            <p class="lead">
+                Parc Güell is one of the world's most intriguing parks. The park's colorful main staircase and the fanciful pavilions that were designed by
+                Antoni Gaudí look like they belong in some fairy tale.
+            </p>
+        </div>
+
+        <hr class="featurette-divider">
+        <div class="featurette" id="contact">
+            <img class="featurette-image img-circle img-responsive pull-right" src="~/img/imgAt/Barclona3.jpg">
+            <h2 class="featurette-heading">
+                National Palace
+                <span class="text-muted">National Palace</span>
+            </h2>
+            <p class="lead">
+                The Palau Nacional (National Palace) is an imposing building that was erected on the occasion of the 1929 International Exhibition,
+                which was held on the flank of a hill called Montjuïc. The sprawling structure now houses the National Art Museum of Catalonia.
+            </p>
+        </div>
+        <hr class="featurette-divider">
+        <!-- Video Barcelona -->
+        <h2>Barcelona-Travel Guide</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/L_bgTJkFk3k" frameborder="0"></iframe>
+    </div>
+</section>
+
+<!-- New York  -->
+<section id="NewYork" class="content-section text-center">
+    <header class="NewYork-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="tagline">New York</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <hr class="featurette-divider">
+        <div class="featurette" id="about">
+            <img class="featurette-image img-circle img-responsive pull-right" src="~/img/imgAt/NewYork1.jpg">
+            <h2 class="featurette-heading">
+                Times Square<br />
+                <span class="text-muted">Times Square</span>
+            </h2>
+            <p class="lead">
+                Times Square, the most bustling square of New York is known for its many Broadway theatres, cinemas and electronic billboards.
+                It is one of those places that make New York a city that never sleeps..
+            </p>
+        </div>
+        <hr class="featurette-divider">
+        <div class="featurette" id="services">
+            <img class="featurette-image img-circle img-responsive pull-left" src="~/img/imgAt/NewYork2.jpg">
+            <h2 class="featurette-heading">
+                Brooklyn Bridge
+                <span class="text-muted">Brooklyn Bridge</span>
+            </h2>
+            <p class="lead">
+                The Brooklyn Bridge, built between 1869 and 1883, connects Manhattan with New York's most populous borough, Brooklyn.
+                The bridge is one of the most famous and magnificent landmarks in New York City.
+            </p>
+        </div>
+        <hr class="featurette-divider">
+        <div class="featurette" id="contact">
+            <img class="featurette-image img-circle img-responsive pull-right" src="~/img/imgAt/NewYork3.jpg">
+            <h2 class="featurette-heading">
+                Statue of Liberty
+                <span class="text-muted">Statue of Liberty</span>
+            </h2>
+            <p class="lead">
+                For the many immigrants who flocked from Europe to New York, the Statue of Liberty was the first image they saw of the USA.
+                The statue was a gift from the French government for the 100th anniversary of America's Independence.
+            </p>
+        </div>
+        <hr class="featurette-divider">
+        <!--Video New York  -->
+        <h2> NEW YORK-Travel Guide</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/MtCMtC50gwY" frameborder="0"></iframe>
+    </div>
+</section>
+
+<!-- London  -->
+<section id="London" class="content-section text-center">
+    <header class="London-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="tagline">London</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <hr class="featurette-divider">
+        <!-- London Attractions  -->
+        <div class="featurette" id="about">
+            <img class="featurette-image img-circle img-responsive pull-right" src="~/img/imgAt/London1.jpg">
+            <h2 class="featurette-heading">
+                Big Ben<br />
+                <span class="text-muted">Big Ben</span>
+            </h2>
+            <p class="lead">The Clock Tower of the Palace of Westminster - officially named Saint Stephen's Tower - is commonly known as the Big Ben. The tower is one of London's most famous landmarks.</p>
+        </div>
+        <hr class="featurette-divider">
+        <div class="featurette" id="services">
+            <img class="featurette-image img-circle img-responsive pull-left" src="~/img/imgAt/London2.jpg">
+            <h2 class="featurette-heading">
+                London Eye
+                <span class="text-muted">London Eye</span>
+            </h2>
+            <p class="lead">
+                A modern but already very popular tourist attraction is the London Eye, a giant observation wheel located in the Jubilee Gardens on the South Bank.
+                The 135 meter (443ft) tall structure was built as part of London's millennium celebrations.
+            </p>
+        </div>
+        <hr class="featurette-divider">
+        <div class="featurette" id="contact">
+            <img class="featurette-image img-circle img-responsive pull-right" src="~/img/imgAt/London3.jpg">
+            <h2 class="featurette-heading">
+                Tower Bridge
+                <span class="text-muted">Tower Bridge</span>
+            </h2>
+            <p class="lead">
+                London's Tower Bridge is one of the most recognizable bridges in the world.
+                Its Victorian Gothic style stems from a law that forced the designers to create a structure that would be in harmony with the nearby Tower of London.
+            </p>
+        </div>
+        <hr class="featurette-divider">
+        <!-- Video Video  -->
+        <h2>LONDON-Travel Guide</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/45ETZ1xvHS0?list=PLdgCSoJzrmKFXYP_UyJb3b5hFS_703eT8" frameborder="0"></iframe>
+    </div>
+</section>
+
+<!-- Beijing  -->
+<section id="Bijing" class="content-section text-center">
+    <header class="bij-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="tagline">beijing</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <hr class="featurette-divider">
+        <!-- Beijing Attractions -->
+        <div class="featurette" id="about">
+            <img class="featurette-image img-circle img-responsive pull-right" src="~/img/imgAt/beijin1.jpg">
+            <h2 class="featurette-heading">
+                Great Wall<br />
+                <span class="text-muted">Great Wall</span>
+            </h2>
+            <p class="lead">
+                Climbing the Great Wall is a must for you no matter how buy you are! In Beijing there are mainly eight sections of the Great Wall crossing the northern part
+                of Beijing for 600 kms. The eight sections are Badaling, Juyongguan, Huanghuacheng, Jiankou, Mutianyu, Gubeikou, Jinshanling, and Simatai. Most of the sections of the Great
+                Wall in Beijing are well-preserved and mainly the relics dating from the Ming Dynasty, the time for huge construction. For the Great Wall hiking, get ready for strong footwear.
+                For hot weather, please also prepare for Great Wall sunblock, sunglasses and water. For cold days, get ready for your hat and heavy coat.
+            </p>
+        </div>
+        <hr class="featurette-divider">
+        <div class="featurette" id="services">
+            <img class="featurette-image img-circle img-responsive pull-left" src="~/img/imgAt/beijin2.jpg">
+            <h2 class="featurette-heading">
+                Olympic Green
+                <span class="text-muted">Olympic Green</span>
+            </h2>
+            <p class="lead">
+                Affectionately known as Bird's Nest, it is situated in Olympic Green Village, Chaoyang District. It was designed as the main stadium of
+                2008 Beijing Olympic Games. The Olympic events of track and field, football, gavelock, weight throw and discus were held there. Since October, 2008, after the Olympics
+                ended, it has been opened as a tourist attraction. Now, it's the center of international or domestic sports competition and recreation activities.
+            </p>
+        </div>
+        <hr class="featurette-divider">
+        <div class="featurette" id="contact">
+            <img class="featurette-image img-circle img-responsive pull-right" src="~/img/imgAt/beijin3.jpg">
+            <h2 class="featurette-heading">
+                Temple of Heaven
+                <span class="text-muted">Temple of Heaven </span>
+            </h2>
+            <p class="lead">
+                Temple of Heaven is one of the real highlights of Beijing. It is situated in the southern Beijing City. It has been one of the most sacred sites for the
+                whole country for the past five centuries. It worked as sacrificial compound buildings for the Ming and Qing emperors. It boasts of the largest sacrificial place in Beijing
+                among a few imperial altars to Heaven, Earth, the Sun, the Moon super natures. What's the intriguing by-production of the temple is that if you enter tTemple of Heavenhe
+                Temple of Heaven in the early morning, you can find many people doing all types of kung fu and taiji and other morning exercises. Furthermore, many people happily play
+                each other with music, songs or cards. You can also join them if you want.
+            </p>
+        </div>
+        <hr class="featurette-divider">
+        <!-- Video Beijing -->
+        <h2>Beijing-Travel Guide</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/4mptgbtMcTc" frameborder="0"></iframe>
+    </div>
+</section>
+
+<!-- Amsterdam  -->
+<section id="Amsterdam" class="content-section text-center">
+    <header class="Ams-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="tagline">Amsterdam</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <hr class="featurette-divider">
+        <!-- Amsterdam Attractions  -->
+        <div class="featurette" id="about">
+            <img class="featurette-image img-circle img-responsive pull-right" src="~/img/imgAt/amsterdam1.jpg">
+            <h2 class="featurette-heading">
+                Rijksmuseum
+                <span class="text-muted">Rijksmuseum</span>
+            </h2>
+            <p class="lead">
+                Amsterdam's Rijksmuseum is the largest museum of art and history in the Netherlands.
+                With nearly one million objects in its permanent collection, this immense museum attracts thousands upon thousands of visitors each year,
+                making it one of the city's most popular cultural attractions.
+            </p>
+        </div>
+        <hr class="featurette-divider">
+        <div class="featurette" id="services">
+            <img class="featurette-image img-circle img-responsive pull-left" src="~/img/imgAt/amsterdam2.jpg">
+            <h2 class="featurette-heading">
+                Flower Market
+                <span class="text-muted">Flower Market</span>
+            </h2>
+            <p class="lead">Amsterdam's unique Bloemenmarkt (flower market), located at the Singel Canal near the Mint Tower, has been a city institution since 1862.</p>
+        </div>
+        <hr class="featurette-divider">
+        <div class="featurette" id="contact">
+            <img class="featurette-image img-circle img-responsive pull-right" src="~/img/imgAt/amsterdam3.jpg">
+            <h2 class="featurette-heading">
+                Scheepvartmuseum
+                <span class="text-muted">Scheepvartmuseum</span>
+            </h2>
+            <p class="lead">
+                Housed in a 350-year-old warehouse, formerly an arsenal for the Admiralty of Amsterdam, the Scheepvaartmuseum (Maritime Museum) is
+                truly one of the best maritime museums in the world, offering the most comprehensive look at the Netherlands' centuries-long tie to the sea.
+            </p>
+        </div>
+        <hr class="featurette-divider">
+        <!--  Amsterdam Video  -->
+        <h2>Amsterdam-Travel Guide</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ey_L_VzPwEI" frameborder="0"></iframe>
+    </div>
+</section>
+
+
+<!-- Suppliers -->
+<section id="Suppliers" class="content-section text-center">
+    <div class="White-section">
+        <div class="container">
+            <div class="row">
+                <aside class="clients">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-6">
+                                <a href="#">
+                                    <img src="http://www.bermudaboatparade.bm/2010sponsorLogos/AmericanAirlinesLogo.png" class="img-responsive img-centered" alt="">
+                                </a>
+                            </div>
+                            <div class="col-md-2 col-sm-6">
+                                <a href="#">
+                                    <img src="http://promo.agarre.com/formas-pagamento/images/lufthansa-logo.jpg" class="img-responsive img-centered" alt="">
+                                </a>
+                            </div>
+                            <div class="col-md-2 col-sm-6">
+                                <a href="#">
+                                    <img src="http://promo.agarre.com/formas-pagamento/images/iberia-logo.jpg" class="img-responsive img-centered" alt="">
+                                </a>
+                            </div>
+                            <div class="col-md-2 col-sm-6">
+                                <a href="#">
+                                    <img src="http://promo.agarre.com/formas-pagamento/images/delta-airlines-logo.jpg" class="img-responsive img-centered" alt="">
+                                </a>
+                            </div>
+                            <div class="col-md-2 col-sm-6">
+                                <a href="#">
+                                    <img src="http://promo.agarre.com/formas-pagamento/images/british-logo.jpg" class="img-responsive img-centered" alt="">
+                                </a>
+                            </div>
+                            <div class="col-md-2 col-sm-6">
+                                <a href="#">
+                                    <img src="http://promo.agarre.com/formas-pagamento/images/avianca-logo.jpg" class="img-responsive img-centered" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</section>

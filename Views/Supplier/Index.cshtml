@@ -1,0 +1,95 @@
+﻿@model PagedList.IPagedList<PandaTours.Models.Supplier>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+@{
+    ViewBag.Title = "Index";
+}
+
+<br /><br />
+<br /><br />
+<br /><br />
+<div class="container body-content">
+    <h2 class="text-muted">Panda-Tours Suppliers</h2>
+    <div class="text-right">
+        @if (User.Identity.Name == System.Configuration.ConfigurationManager.AppSettings["adminUserName"])
+        {
+            <p>
+                @Html.ActionLink("Create New", "Create")
+            </p>
+        }
+    </div>
+    <hr />
+    <br />
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            @using (Html.BeginForm("Index", "Supplier", FormMethod.Get))
+            {
+                <p>
+                    <h2 class="text-muted3">Find Supplier by Destination or by Name:</h2> @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+                    <input type="submit" value="Search" class="btn btn-primary" />
+                </p>
+            }
+        </div>
+    </div>
+    <br />
+    <table class="table">
+        <tr>
+            <th>
+                SupplierName
+            </th>
+            <th>
+                Address
+            </th>
+            <th>
+                Destination
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                TelephoneSupplier
+            </th>
+            @if (User.Identity.Name == System.Configuration.ConfigurationManager.AppSettings["adminUserName"])
+            {
+                <th></th>
+            }
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SupplierName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Destination)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TelephoneSupplier)
+                </td>
+                @if (User.Identity.Name == System.Configuration.ConfigurationManager.AppSettings["adminUserName"])
+                {
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.SupplierID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.SupplierID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.SupplierID })
+                    </td>
+                }
+            </tr>
+        }
+
+    </table>
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+        </div>
+    </div>
+    </div>

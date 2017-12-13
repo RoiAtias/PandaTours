@@ -1,0 +1,99 @@
+﻿@model IEnumerable<PandaTours.Models.VacationPackagePriceResult>
+
+@{
+    ViewBag.Title = "vacationPackagePrice";
+}
+<br ><br />
+<br ><br />
+<div class="container body-content">
+    <header class="coffee-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-left">
+                        <h1 class="tagline">Coupon for for coffee and cake</h1><br /><br />
+                        <h2 class="text-muted">check if you are in the list </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <br />
+    <br />
+
+    <table class="table table-bordered">
+        <tr>
+            <th>
+                CustomerID
+            </th>
+            <th>
+                PassportNum
+            </th>
+            <th>
+                FirstName
+            </th>
+            <th>
+                LastName
+            </th>
+            <th>
+                VacationPackageID
+            </th>
+            <th>
+                Hotel
+            </th>
+            <th>
+                NightNum
+            </th>
+            <th>
+                Destination
+            </th>
+            <th>
+                PassengersNum
+            </th>
+            <th>
+                Total
+            </th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td>
+                    @item.CustomerID
+                </td>
+                <td>
+                    @item.PassportNum
+                </td>
+                <td>
+                    @item.FirstName
+                </td>
+                <td>
+                    @item.LastName
+                </td>
+                <td>
+                    @item.VacationPackageID
+                </td>
+                <td>
+                    @item.Hotel
+                </td>
+                <td>
+                    @item.NightNum
+                </td>
+                <td>
+                    @item.Destination
+                </td>
+                <td>
+                    @item.PassengersNum
+                </td>
+                <td>
+                    @item.Total
+                </td>
+
+            </tr>
+        }
+
+    </table>
+    </div>
+

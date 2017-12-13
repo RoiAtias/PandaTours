@@ -1,0 +1,75 @@
+﻿@model PandaTours.Models.Order
+
+@{
+    ViewBag.Title = "Create";
+}
+<div class="container body-content">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <br /><br />
+        <br /><br />
+        <br /><br />
+
+        <h2 class="text-muted">Order Details</h2>
+        <div class="text-right">
+            <div>
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        </div>
+        <hr />
+        <div class="form-horizontal">
+            @Html.ValidationSummary(true)
+            @Html.HiddenFor(model => model.OrderID)
+
+            @Html.HiddenFor(model => model.CustomerID)
+
+            @Html.HiddenFor(model => model.VacationPackageID)
+
+            @Html.HiddenFor(model => model.Total)
+
+            @Html.HiddenFor(model => model.OrderDate)
+
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.PassengersNum, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PassengersNum)
+                @Html.ValidationMessageFor(model => model.PassengersNum)
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </div>
+
+    }
+
+    <br />
+    <br />
+
+    <div class="checkout-wrap">
+        <ul class="checkout-bar">
+            <li class="visited first">
+                <a href="#">Select A Deal</a>
+            </li>
+
+            <li class="previous visited">Insert Your Details</li>
+
+            <li class="active">Insert Deals Details</li>
+
+            <li class="#">Complete Order</li>
+
+            <li class="">HOT offers</li>
+
+        </ul>
+    </div>
+
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+    </div>

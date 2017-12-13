@@ -1,0 +1,96 @@
+﻿@model PandaTours.Models.Order
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<br />
+<br />
+<br />
+<div class="container body-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="text-muted">order details</h2>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <br />
+    <br />
+
+    <fieldset>
+
+        <table class="table">
+            <tr>
+                <th>PassportNum</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>BirthDate</th>
+                <th>Destination</th>
+                <th>Hotel</th>
+                <th>DepartDate</th>
+                <th>ReturnDate</th>
+                <th>Total</th>
+                <th>OrderDate</th>
+            </tr>
+
+            <tbody>
+                <tr>
+                    <td data-label="Passport Number">@Html.DisplayFor(model => model.Customer.PassportNum)</td>
+                    <td data-label="First Name">@Html.DisplayFor(model => model.Customer.FirstName)</td>
+                    <td data-label="Last Name">@Html.DisplayFor(model => model.Customer.LastName)</td>
+                    <td data-label="BirthDate">@Html.DisplayFor(model => model.Customer.BirthDate)</td>
+                    <td data-label="Destination">@Html.DisplayFor(model => model.VacationPackage.Destination)</td>
+                    <td data-label="Hotel">@Html.DisplayFor(model => model.VacationPackage.Hotel)</td>
+                    <td data-label="Depart Date">@Html.DisplayFor(model => model.VacationPackage.DepartDate)</td>
+                    <td data-label="Return Date">@Html.DisplayFor(model => model.VacationPackage.ReturnDate)</td>
+                    <td data-label="Total">@Html.DisplayFor(model => model.Total)</td>
+                    <td data-label="Order Date">@Html.DisplayFor(model => model.OrderDate) </td>
+                </tr>
+            </tbody>
+        </table>
+        <br />
+        <br />
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="display-field">
+                        <img src=\img\@Html.DisplayFor(modelItem =>modelItem.VacationPackage.Image) wigth="400" higth="200">
+                        <br />
+                        <br />
+                        @Html.ActionLink("HOT OFFERS", "Bonus", "Order", new { @class = "btn btn-info" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br />
+        <br />
+        <div class="checkout-wrap">
+            <ul class="checkout-bar">
+                <li class="visited first">
+                    <a href="#">Select A Deal</a>
+                </li>
+
+                <li class="previous visited">Insert Your Details</li>
+
+                <li class="previous visited">Insert Deals Details</li>
+
+                <li class="active">Complete Order</li>
+
+                <li class="#">HOT offers</li>
+
+            </ul>
+        </div>
+
+
+
+
+
+    </fieldset>
+    <script language="JavaScript">
+        alert("Your data is successfully accepted, Thank u for buying Panda Tours, Have a nice vacation");
+    </script>
+      </div>
+

@@ -1,0 +1,243 @@
+﻿@model IEnumerable<PandaTours.Models.Location>
+@{
+    ViewBag.Title = "Index";
+}
+<br><br />
+<br><br />
+<br><br />
+
+
+<head>
+    <title></title>
+    <style type="text/css">
+        #map-canvas {
+            width: 100%;
+            height: 520px;
+        }
+    </style>
+
+</head>
+
+<div class="container body-content">
+    <div class="row">
+        <div class="col-lg-12">
+            <img src="~/img/imgLocation/Service.png" align="right">
+            <h2 class="text-muted2">Panda-Tours Stores</h2>
+        </div>
+    </div>
+    @if (User.Identity.Name == System.Configuration.ConfigurationManager.AppSettings["adminUserName"])
+    {
+        <div>
+            @Html.ActionLink("Create New", "Create", "Places", null, new { @class = "btn btn-primary" })
+        </div>
+
+    }
+    <hr>
+    <div class="row text-center">
+        <div class="col-md-3 col-sm-6 hero-feature">
+            <div class="thumbnail">
+                <img src="~/img/imgLocation/1.jpg" alt="">
+                <div class="caption">
+                    <h4>Jerusalem</h4>
+                    <h2 class="text-muted3"> Mamilla Center</h2>
+                    <br />
+                    <div class="text-left">
+                        <div class="text-b">
+                            Opening times:<br /><br />
+                            Sun, Mon,Thurs 9 am - 8 pm <br /><br />
+                            Wed,Tues 10 am - 8 pm<br /><br />
+                            Fri and Holiday Eves 9 am - 2 pm<br /><br />
+                            Sat and Holidays close
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 hero-feature">
+            <div class="thumbnail">
+                <img src="~/img/imgLocation/2.jpg" alt="">
+                <div class="caption">
+                    <h4>Tel Aviv</h4>
+                    <h2 class="text-muted3"> Azrieli Shopping-Center</h2>
+                    <div class="text-left">
+                        <div class="text-b">
+                            Opening times:<br /><br />
+                            Sun, Mon,Thurs 9 am - 8 pm <br /><br />
+                            Wed,Tues 10 am - 8 pm<br /><br />
+                            Fri and Holiday Eves 9 am - 2 pm<br /><br />
+                            Sat and Holidays close
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 hero-feature">
+            <div class="thumbnail">
+                <img src="~/img/imgLocation/3.jpg" alt="">
+                <div class="caption">
+                    <h4>Tel Aviv</h4>
+                    <h2 class="text-muted3">Port of Tel Aviv</h2><br />
+                    <div class="text-left">
+                        <div class="text-b">
+                            Opening times:<br /><br />
+                            Sun, Mon,Thurs 9 am - 8 pm <br /><br />
+                            Wed,Tues 10 am - 8 pm<br /><br />
+                            Fri and Holiday Eves 9 am - 2 pm<br /><br />
+                            Sat and Holidays close
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 hero-feature">
+            <div class="thumbnail">
+                <img src="~/img/imgLocation/6.jpg" alt="">
+                <div class="caption">
+                    <h4>Tel Aviv</h4>
+                    <h2 class="text-muted3"> Sarona Complex</h2><br />
+                    <div class="text-left">
+                        <div class="text-b">
+                            Opening times:<br /><br />
+                            Sun, Mon,Thurs 9 am - 8 pm <br /><br />
+                            Wed,Tues 10 am - 8 pm<br /><br />
+                            Fri and Holiday Eves 9 am - 2 pm<br /><br />
+                            Sat and Holidays close
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="row text-center">
+        <div class="col-md-3 col-sm-6 hero-feature">
+            <div class="thumbnail">
+                <img src="~/img/imgLocation/7.jpg" alt="">
+                <div class="caption">
+                    <h4>Herzliya</h4>
+                    <h2 class="text-muted3">IDC Herzliya</h2><br />
+                    <div class="text-left">
+                        <div class="text-b">
+                            Opening times:<br /><br />
+                            Sun, Mon,Thurs 9 am - 8 pm <br /><br />
+                            Wed,Tues 10 am - 8 pm<br /><br />
+                            Fri and Holiday Eves 9 am - 2 pm<br /><br />
+                            Sat and Holidays close
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 hero-feature">
+            <div class="thumbnail">
+                <img src="~/img/imgLocation/4.jpg" alt="">
+                <div class="caption">
+                    <h4>Rishon Lezion</h4>
+                    <h2 class="text-muted3">College Of Management</h2>
+                    <div class="text-left">
+                        <div class="text-b">
+                            Opening times:<br /><br />
+                            Sun, Mon,Thurs 9 am - 8 pm <br /><br />
+                            Wed,Tues 10 am - 8 pm<br /><br />
+                            Fri and Holiday Eves 9 am - 2 pm<br /><br />
+                            Sat and Holidays close
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-3 col-sm-6 hero-feature">
+            <div class="thumbnail">
+                <img src="~/img/imgLocation/5.jpg" alt="">
+                <div class="caption">
+                    <h4>Eilat</h4>
+                    <h2 class="text-muted3">Ice Mall Eilat</h2> <br />
+                    <div class="text-left">
+                        <div class="text-b">
+                            Opening times:<br /><br />
+                            Sun, Mon,Thurs 9 am - 8 pm <br /><br />
+                            Wed,Tues 10 am - 8 pm<br /><br />
+                            Fri and Holiday Eves 9 am - 2 pm<br /><br />
+                            Sat and Holidays close
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 hero-feature">
+            <div class="thumbnail">
+                <img src="~/img/imgLocation/8.jpg" alt="">
+                <div class="caption">
+                    <h4>Haifa</h4>
+                    <h2 class="text-muted3">Technion</h2><br />
+                    <div class="text-left">
+                        <div class="text-b">
+                            Opening times:<br /><br />
+                            Sun, Mon,Thurs 9 am - 8 pm <br /><br />
+                            Wed,Tues 10 am - 8 pm<br /><br />
+                            Fri and Holiday Eves 9 am - 2 pm<br /><br />
+                            Sat and Holidays close
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <hr />
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script type="text/JavaScript">
+        function initialize() {
+            // Set initial location as Israel's center
+            var israelLatlng = new google.maps.LatLng(32.075548, 34.774229);
+            // Set map options
+            var mapOptions = {
+                zoom: 13,
+                center: israelLatlng,
+                zoomControl: true,
+                scaleControl: true,
+                streetViewControl: true,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            // Define map object in page
+            var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+            // Execute setMarkers function to populate map with markers from DB
+            setMarkers(map);
+        }
+
+        // This function iterates over Places table in DB and populates map with markers
+        function setMarkers(map) {
+
+            @foreach (var location in Model)
+        {
+            <text>
+            var myLatLng = new google.maps.LatLng('@location.Latitude', '@location.Longitude');
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: '@location.Description',
+                zIndex: @location.ZIndex});
+            </text>
+        }
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+    <body>
+        <div id="map-canvas"></div>
+    </body>
+
+
+    </div>
+

@@ -1,0 +1,64 @@
+﻿@model PandaTours.Models.Order
+
+@{
+    ViewBag.Title = "Details";
+}
+<br /><br />
+<br /><br />
+<br /><br />
+<div class="container body-content">
+    <h2 class="text-muted">Order Details</h2>
+    <div class="text-right">
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+    <div class="text-left">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.OrderID })
+    </div>
+    <hr />
+    <br />
+    <div class="text-left">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Customer.PassportNum)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Customer.PassportNum)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.VacationPackage.Destination)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.VacationPackage.Destination)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PassengersNum)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PassengersNum)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Total)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Total)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.OrderDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.OrderDate)
+            </dd>
+
+        </dl>
+    </div>
+    </div>
+

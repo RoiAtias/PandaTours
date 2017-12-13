@@ -1,0 +1,64 @@
+﻿@model PandaTours.Models.Supplier
+
+@{
+    ViewBag.Title = "Details";
+}
+<br /><br />
+<br /><br />
+<br /><br />
+<div class="container body-content">
+    <h2 class="text-muted">Supplier Details</h2>
+    <div class="text-right">
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+    <div class="text-left">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.SupplierID })
+    </div>
+    <hr />
+    <br />
+    <div class="text-left">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.SupplierName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SupplierName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Address)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Destination)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Destination)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TelephoneSupplier)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TelephoneSupplier)
+            </dd>
+
+        </dl>
+    </div>
+    </div>
+

@@ -1,0 +1,117 @@
+﻿@model PagedList.IPagedList<PandaTours.Models.Customer>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<br /><br />
+<br /><br />
+<br /><br />
+<div class="container body-content">
+    <h2 class="text-muted">Panda-Tours Customers</h2>
+    <div class="text-right">
+
+        @if (User.Identity.Name == System.Configuration.ConfigurationManager.AppSettings["adminUserName"])
+        {
+            <p>
+                @Html.ActionLink("Create New", "Create")
+            </p>
+        }
+
+    </div>
+    <hr />
+    <br />
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            @using (Html.BeginForm("Index", "Customer", FormMethod.Get))
+            {
+                <p>
+                    <h2 class="text-muted3">Find Customer by First Name:</h2> @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+                    <input type="submit" value="Search" class="btn btn-primary" />
+                </p>
+            }
+        </div>
+    </div>
+    <br />
+    <table class="table">
+        <tr>
+            <th>
+                PassportNum
+            </th>
+            <th>
+                FirstName
+            </th>
+            <th>
+                LastName
+            </th>
+            <th>
+                BirthDate
+            </th>
+            <th>
+                Address
+            </th>
+            <th>
+                PhoneNum
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                JoinDate
+            </th>
+            @if (User.Identity.Name == System.Configuration.ConfigurationManager.AppSettings["adminUserName"])
+            {
+                <th></th>
+            }
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PassportNum)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BirthDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhoneNum)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.JoinDate)
+                </td>
+                @if (User.Identity.Name == System.Configuration.ConfigurationManager.AppSettings["adminUserName"])
+                {
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.CustomerID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.CustomerID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.CustomerID })
+                    </td>
+                }
+            </tr>
+        }
+
+    </table>
+    <br />
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+        </div>
+    </div>
+    </div>

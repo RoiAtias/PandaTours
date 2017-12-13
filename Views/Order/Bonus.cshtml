@@ -1,0 +1,77 @@
+﻿@{
+    ViewBag.Title = "Bonus";
+}
+<br />
+<div class="container body-content">
+    <section class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img src="~/img/bonus_travel.jpg" alt="" />
+                </div>
+            </div>
+            <hr>
+            <br />
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="text-muted2">SPECAIL OFFERS CHECK-UP</h2>
+                    <p class="text-p">
+                        just in panda tours website!<br />
+                        for every order you made, you can get a special offer <br />
+                        only you to do is push the button<br />
+                    <p>
+                        @Html.ActionLink("Rent a car and get one day for free", "OrderPassengersNum", "Order", null, new { @class = "btn btn-primary btn-lg" })
+                        <br><br />
+                        @Html.ActionLink("Coupon for for coffee and cake     ", "vacationPackagePrice", "vacationPackage", null, new { @class = "btn btn-primary btn-lg" })
+                        <br><br />
+                        @Html.ActionLink("50% on CityTour Card               ", "OrderDistGroupBy", "vacationPackage", null, new { @class = "btn btn-primary btn-lg" })
+                        <br><br />
+                    </p>
+                </div>
+
+            </div>
+            <div class="checkout-wrap">
+                <ul class="checkout-bar">
+                    <li class="visited first">
+                        <a href="#">Select A Deal</a>
+                    </li>
+
+                    <li class="previous visited">Insert Your Details</li>
+
+                    <li class="previous visited">Insert Deals Details</li>
+
+                    <li class="previous visited">Complete Order</li>
+
+                    <li class="active">HOT offers</li>
+
+                </ul>
+            </div>
+            <br />
+            <hr>
+            <br /><br /><br />
+            <div class="row">
+                <div class="col-sm-4">
+                    <img class="img-circle img-responsive img-center" src="~/img/50.png" alt="">
+                    <h4>50% on CityTour Card </h4>
+                    <p>showing customers that made order with at least 2 night (GroupBy Query)</p>
+
+                </div>
+                <div class="col-sm-4">
+                    <img class="img-circle img-responsive img-center" src="~/img/deal.png" alt="">
+                    <h4>rent a car and get one day for free</h4>
+                    <p>showing customers that made order with at least 3 passengers  (Join Query)</p>
+                </div>
+                <div class="col-sm-4">
+                    <img class="img-circle img-responsive img-center" src="~/img/75.png" alt="">
+                    <h4>Coupon for for coffee and cake</h4>
+                    <p>showing customers that made order for a total amount of 499.9 $ (Join Query)</p>
+                </div>
+            </div>
+            <div>
+            </div>
+        </div>
+        <hr />
+    </section>
+    </div>
+
+

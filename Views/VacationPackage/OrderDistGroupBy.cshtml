@@ -1,0 +1,75 @@
+﻿@model IEnumerable<PandaTours.Models.OrderDistResult>
+
+@{
+    ViewBag.Title = "OrderDistResult";
+}
+<br ><br />
+<br ><br />
+<div class="container body-content">
+    <header class="bus-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-left">
+                        <br />
+                        <h1 class="tagline">50% on CityTour Card</h1><br /><br />
+                        <h2 class="text-muted">check if you are in the list </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <br />
+    <br />
+
+
+    <table class="table table-bordered">
+        <tr>
+            <th>
+                CustomerID
+            </th>
+            <th>
+                PassportNum
+            </th>
+            <th>
+                FirstName
+            </th>
+            <th>
+                LastName
+            </th>
+            <th>
+                Destination
+            </th>
+            <th>
+                Total
+            </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td>
+                    @item.CustomerID
+                </td>
+                <td>
+                    @item.PassportNum
+                </td>
+                <td>
+                    @item.FirstName
+                </td>
+                <td>
+                    @item.LastName
+                </td>
+                <td>
+                    @item.Destination
+                </td>
+                <td>
+                    @item.Total
+                </td>
+
+            </tr>
+        }
+
+    </table>
+
+    </div>

@@ -1,0 +1,151 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+<br><br />
+<br><br />
+<head>
+    <title></title>
+
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s);
+            js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3"; fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+</head>
+<div class="container body-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="text-muted2">About Us</h2>
+            </div>
+            <p class="text-p">
+                Panda-Tours Group is the largest and most prominent travel group in Israel.<br />
+                The company is engaged in the leisure and recreation industry.<br />
+                Being a member of some of the world's leading tourism organizations,enables to provide its clients with a wide range of services including, <br />international flights, hotels, tours, domestic and inbound travel, car rental and cruises.<br />
+                Panda-Tours  website offers all tourism services at convenient prices.<br />
+                The company has a Call Center and a highly trained team of agents that provides services to our corporate clients and the general public.
+            </p>
+            <br /><br /><br />
+            <h2 class="text-muted3">View of our destinations</h2>
+            <div class="col-lg-12 text-center">
+                <aside>
+                    <video controls class="videoUsage">
+                        <source src="~/Content/Video/PandaTours.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                </aside>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <br />
+    <br />
+    <div class="col-lg-12 text-center">
+        <h2 class="text-muted"> Our Amazing Team</h2>
+    </div>
+    <div class="col-sm-6 col-lg-6 col-md-6">
+        <div class="team-member">
+            <div class="card-container">
+                <div class="card">
+                    <div class="side"><img src="~/img/sh.jpg" width="389" height="367" class="img-responsive img-circle" alt=""></div>
+                    <div class="side back">
+                        Shirel Ashkenazi<br />
+                        Lead Developer<br />
+                        shirel.as@gmail.com
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-lg-6 col-md-6">
+        <div class="team-member">
+            <div class="card-container">
+                <div class="card">
+                    <div class="side"><img src="~/img/roi.jpg" width="389" height="367" class="img-responsive img-circle" align="right"></div>
+                    <div class="side back">
+                        Roi Atias <br />
+                        Lead Developer<br />
+                        roiat4@gmail.com
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <br><br />
+    <br><br />
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h2 class="text-muted">Contact Panda Tours</h2>
+            <div class="newspaper">
+                <div class="text-p">
+                    PandaTours group maintains over 8 branches throughout Israel<br /> and employs over 250 employees in Israel   Call Us at our ‘Call Centers’:<br /> 1800-9633510 or at *8228 ,<br /> available 6 days a week from 9:00-23:00
+                    Write Us at:<br />  negishut@pandaTours.com
+                </div>
+            </div>
+            <br><br />
+            <br><br />
+            <p>
+                <canvas id="myCanvas" width="340" height="80" style="border: 1px solid #999999;">
+                    Your browser does not support the HTML5 canvas tag.
+                </canvas>
+            </p>
+            <script>
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.font = "30px Arial";
+                ctx.strokeText("      Recommend Us", 10, 50)
+            </script>
+
+
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div id="fb-root"></div>
+
+
+                    <div class="fb-page" data-href="https://www.facebook.com/pages/PandaTours/603414263094538?skip_nax_wizard=true&amp;ref_type=bookmark" data-width="500" data-height="900"
+                         data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true">
+                        <div class="fb-xfbml-parse-ignore">
+                            <blockquote cite="https://www.facebook.com/pages/PandaTours/603414263094538?skip_nax_wizard=true&amp;ref_type=bookmark">
+                                <a href="https://www.facebook.com/pages/PandaTours/603414263094538?skip_nax_wizard=true&amp;ref_type=bookmark">PandaTours</a>
+                            </blockquote>
+                        </div>
+                    </div>
+
+
+                    <br><br />
+                    <br><br />
+
+
+
+                    <div class="fb-comments" data-href="https://www.facebook.com/pages/PandaTours/603414263094538?skip_nax_wizard=true&amp;ref_type=bookmark" data-width="1000" data-numposts="5"></div>
+                    <div class="fb-share-button" data-href="https://www.facebook.com/pages/PandaTours/603414263094538?skip_nax_wizard=true&amp;ref_type=bookmark" data-layout="button_count"></div>
+                </div>
+            </div>
+        </div>
+        <hr />
+
+        <hr />
+        <div class="col-lg-12 text-center">
+            <ul class="list-inline banner-social-buttons">
+                <li>
+                    <a href="https://www.facebook.com/" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                </li>
+                <li>
+                    <a href="https://instagram.com/" class="btn btn-default btn-lg"><i class="fa fa-instagram fa-fw"></i> <span class="network-name">instagram</span></a>
+                </li>
+                <li>
+                    <a href="https://plus.google.com/" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/nhome/" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">linkedin</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

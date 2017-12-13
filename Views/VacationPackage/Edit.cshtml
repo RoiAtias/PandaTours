@@ -1,0 +1,110 @@
+﻿@model PandaTours.Models.VacationPackage
+
+@{
+    ViewBag.Title = "Edit";
+}
+<br /><br />
+<br /><br />
+<br /><br />
+<div class="container body-content">
+    <h2 class="text-muted">Edit Vacation-Package</h2>
+    <div class="text-right">
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+    <hr />
+    <br />
+    <br />
+    <div class="text-left">
+        @using (Html.BeginForm("Edit", "VacationPackage", null, FormMethod.Post,
+                              new { enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+
+            <fieldset>
+                <legend>Vacation-Package</legend>
+
+                @Html.HiddenFor(model => model.VacationPackageID)
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.SupplierID)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.SupplierID)
+                    @Html.ValidationMessageFor(model => model.SupplierID)
+                </div>
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Destination)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Destination)
+                    @Html.ValidationMessageFor(model => model.Destination)
+                </div>
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Hotel)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Hotel)
+                    @Html.ValidationMessageFor(model => model.Hotel)
+                </div>
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.DepartDate)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.DepartDate)
+                    @Html.ValidationMessageFor(model => model.DepartDate)
+                </div>
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.ReturnDate)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.ReturnDate)
+                    @Html.ValidationMessageFor(model => model.ReturnDate)
+                </div>
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.NightNum)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.NightNum)
+                    @Html.ValidationMessageFor(model => model.NightNum)
+                </div>
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.SinglePay)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.SinglePay)
+                    @Html.ValidationMessageFor(model => model.SinglePay)
+                </div>
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Image)
+                    @Html.ValidationMessageFor(model => model.Image)
+                </div>
+                <div class="editor-field">
+                    <input id="Image" title="Upload a product image"
+                           type="file" name="file" />
+                </div>
+
+                <p>
+                    <input type="submit" value="Save" />
+                </p>
+            </fieldset>
+        }
+
+
+
+    </div>
+
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+    </div>
+
+

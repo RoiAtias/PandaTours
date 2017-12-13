@@ -1,0 +1,88 @@
+﻿@model PandaTours.Models.VacationPackage
+
+@{
+    ViewBag.Title = "Details";
+}
+<br /><br />
+<br /><br />
+<br /><br />
+<div class="container body-content">
+    <h2 class="text-muted">Vacation-Package Details</h2>
+    <div class="text-right">
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+    <div class="text-left">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.VacationPackageID })
+    </div>
+    <hr />
+    <br />
+    <div class="text-left">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.supplier.SupplierName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.supplier.SupplierName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Destination)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Destination)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Hotel)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Hotel)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DepartDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DepartDate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ReturnDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ReturnDate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.NightNum)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NightNum)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SinglePay)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SinglePay)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Image)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Image)
+            </dd>
+
+        </dl>
+    </div>
+    </div>
+
